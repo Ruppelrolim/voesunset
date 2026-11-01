@@ -351,10 +351,11 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content:
         <a class="btn" href="#agendar" data-course="Piloto por um dia">Agendar</a>
       </article>
       <article class="course">
-        <div><p class="tag">Hora avulsa · 1 piloto</p><h3>Screening de simulador de outras empresas</h3></div>
+        <div><p class="tag">Hora avulsa · 1 ou 2 pilotos</p><h3>Screening de simulador de outras empresas</h3></div>
         <ul>
           <li>Para o piloto que vai fazer o screening de simulador de uma companhia aérea e quer praticar antes</li>
-          <li>Você contrata por hora, sem pacote fechado. A duração depende do que você quer treinar</li>
+          <li>Você contrata por hora, sem pacote fechado. Mínimo de 1 hora; a duração depende do que você quer treinar</li>
+          <li>Em dupla, a hora é cobrada de cada piloto que voa no assento da esquerda. O outro piloto compõe a tripulação no assento da direita</li>
           <li>Nosso FTD 737NG está preparado para receber esse treino</li>
           <li>Você nos envia o Simulator Syllabus da empresa onde vai fazer a entrevista, e montamos a sessão em cima dele</li>
           <li>Sessão com instrutor comandante de linha, com feedback ao final</li>
@@ -511,7 +512,7 @@ footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content:
   }
   function syncPilots() {
     var k = courseKey(), v = f.course.value;
-    if (k === "single" || v.indexOf("Piloto por um dia") > -1 || v.indexOf("screening") > -1) f.pilots.value = "1";
+    if (k === "single" || v.indexOf("Piloto por um dia") > -1) f.pilots.value = "1";
     if (k === "dupla") f.pilots.value = "2";
   }
   function update() {
